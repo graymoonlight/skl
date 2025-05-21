@@ -1,0 +1,48 @@
+cd client -> npm i -> cd .. -> cd server -> npm i
+если пойдет по жопе:
+создаем папку server
+npm init -y
+npm i express cors bcrypt jsonwebtoken dotenv @prisma/client
+npm i -D nodemon prisma
+npx prisma init
+
+В schema.prisma:
+Добавить module Название {
+    информация с листочка
+}
+Integer - Int
+в id ставим после инфы @id @default(autoincrement())
+Пример связи 1 ко многим bookings     Booking[]
+Если норм:
+После завершения создания серверной части:
+npx prisma migrate dev 
+npx prisma generate
+
+npm run start
+или
+npx prisma studio
+
+Если по жопе:
+создаем папку клиента
+npx create-react-app
+npm i axios react-router-dom react-toastify
+
+git init
+git add .
+git commit -m"First"
+
+postman 
+
+POST http://localhost:5000/api/auth/register
+
+{
+  "login": "Admin",
+  "email": "admin2@example.com",
+  "password": "reustarant",
+  "firstName": "Admin",
+  "lastName": "User",
+  "phoneNumber": "+1234567491",
+  "role": "ADMIN"
+}
+
+Есть ли логин и пароль от постгреса?
